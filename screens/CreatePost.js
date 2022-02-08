@@ -14,12 +14,15 @@ import {
 import { RFValue } from "react-native-responsive-fontsize";
 import DropDownPicker from "react-native-dropdown-picker";
 
+let customFonts = {"Bubblegum-Sans": require("../assets/fonts/BubblegumSans-Regular.ttf")};
+
 export default class CreatePost extends Component {
     constructor(props) {
         super(props);
         this.state = {
             previewImage: "image_1",
-            dropdownHeight: 40
+            dropdownHeight: 40,
+            fontsLoaded: false
         };
     }
 
@@ -31,7 +34,7 @@ export default class CreatePost extends Component {
 
     componentDidMount()
    {
-     this._loadFontsAsync();
+    this._loadFontsAsync();
    }
     
 
